@@ -16,13 +16,6 @@ public class SiparisKalemi {
     private Urun urun;
     private int adet;
 
-
-    public SiparisKalemi(int id, Urun urun, int adet) {
-        this.id = id;
-        this.urun = urun;
-        this.adet = adet;
-    }
-
     public SiparisKalemi(Urun urun, int adet) {
         this.urun = urun;
         this.adet = adet;

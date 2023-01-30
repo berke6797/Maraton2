@@ -1,7 +1,4 @@
 package Soru2.entity;
-
-
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,17 +14,13 @@ public class Musteri {
     private int id;
     private String ad;
     private String soyad;
-    @OneToMany(fetch = FetchType.EAGER,mappedBy = "musteri")
+    @OneToMany(cascade = CascadeType.ALL,mappedBy ="musteri",fetch = FetchType.EAGER)
     private List<Siparis> siparisList;
 
     public Musteri(String ad, String soyad) {
         this.ad = ad;
         this.soyad = soyad;
     }
-    public Musteri(int id, String ad, String soyad) {
-        this.id = id;
-        this.ad = ad;
-        this.soyad = soyad;
-    }
+
 
 }

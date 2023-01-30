@@ -15,14 +15,8 @@ public class Siparis {
     private int id ;
     @ManyToOne(cascade = CascadeType.ALL)
     private Musteri musteri;
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<SiparisKalemi> siparisKalemiList;
-
-    public Siparis (int id, Musteri musteri, List<SiparisKalemi> siparisKalemiList) {
-        this.id = id;
-        this.musteri = musteri;
-        this.siparisKalemiList = siparisKalemiList;
-    }
 
     public Siparis(Musteri musteri, List<SiparisKalemi> siparisKalemiList) {
         this.musteri = musteri;

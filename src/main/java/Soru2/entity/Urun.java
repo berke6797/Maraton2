@@ -16,12 +16,6 @@ public class Urun {
     private String urunAdi;
     private int urunFiyat;
 
-    public Urun(int id, String urunAdi, int urunFiyat) {
-        this.id = id;
-        this.urunAdi = urunAdi;
-        this.urunFiyat = urunFiyat;
-    }
-
     public Urun(String urunAdi, int urunFiyat) {
         this.urunAdi = urunAdi;
         this.urunFiyat = urunFiyat;
